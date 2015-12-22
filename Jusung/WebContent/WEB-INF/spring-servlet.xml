@@ -57,5 +57,23 @@
 		<property name="defaultEncoding" value="utf-8" />
 	</bean>	
 	
+	<!-- locale resolver -->
+	<mvc:interceptors>  
+        <bean  id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="lang"></property>
+        </bean>
+	</mvc:interceptors>
+	<bean id="localeResolver"
+    class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
+    
+    <!-- MessageSource -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="WEB-INF/messages/messages"/>
+        <property name="defaultEncoding" value="UTF-8" />
+        <property name="cacheSeconds" value="180"/>
+	</bean>
+    
+    
+    
 	
 </beans>
