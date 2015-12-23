@@ -1,42 +1,168 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="google" value="notranslate">
 
-    <!-- Bootstrap -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+<title>CodePen - Bootstrap's Affix and ScrollSpy plugins</title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-   <!-- Woosung Css -->
-  <link href="/assets/css/woosung.css" rel="stylesheet">
-  </head>
-  
+<link rel="stylesheet" href="//codepen.io/assets/reset/normalize.css">
+<link rel="stylesheet prefetch"	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet prefetch"	href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+
+body {
+	background: lightblue;
+	position: relative;
+	line-height: 1.5;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1, h2 {
+	font-weight: 700;
+}
+
+h3 span {
+	color: #286090;
+}
+
+.jumbotron {
+	border-radius: 0px;
+	background: #5fb3ce;
+	margin-bottom: 0;
+}
+
+.jumbotron button {
+	margin-top: 10px;
+}
+
+section {
+	padding: 40px 0;
+	border-bottom: 1px solid #c1e1ec;
+}
+
+#web-development, #mobile-development {
+	padding-bottom: 0;
+}
+
+section:last-child {
+	border-bottom: none;
+}
+
+.nav {
+	background: #4baac8;
+}
+
+.nav a {
+	color: black;
+	font-style: italic;
+}
+
+.nav li a:hover, .nav li a:focus {
+	background: #86c5da;
+}
+
+.nav .active {
+	font-weight: bold;
+	background: #72bcd4;
+}
+
+.nav .nav {
+	display: none;
+}
+
+.nav .active .nav {
+	display: block;
+}
+
+.nav .nav a {
+	font-weight: normal;
+	font-size: .85em;
+}
+
+.nav .nav span {
+	margin: 0 5px 0 2px;
+}
+
+.nav .nav .active a, .nav .nav .active:hover a, .nav .nav .active:focus a
+	{
+	font-weight: bold;
+	padding-left: 30px;
+	border-left: 5px solid black;
+}
+
+.nav .nav .active span, .nav .nav .active:hover span, .nav .nav .active:focus span
+	{
+	display: none;
+}
+
+.application {
+	border-top: 1px solid #c1e1ec;
+}
+
+.affix-top {
+	position: relative;
+}
+
+.affix {
+	top: 20px;
+}
+
+.affix, .affix-bottom {
+	width: 213px;
+}
+
+.affix-bottom {
+	position: absolute;
+}
+
+footer {
+	border-top: 1px solid #c1e1ec;
+	height: 50px;
+}
+
+footer p {
+	line-height: 50px;
+	margin-bottom: 0;
+}
+
+@media ( min-width :1200px) {
+	.affix, .affix-bottom {
+		width: 263px;
+	}
+}
+</style>
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+</head>
+
 <body data-spy="scroll" data-target=".scrollspy">
+
 
 	<div class="jumbotron">
 		<div class="container">
-			<div class="col-md-8">
-				<h1>Jusung International Corporation</h1>
-				<p class="lead">Steel Service & Sales Co.,Ltd.</p>
-			</div>
-			<div class="col-md-4">
-				<div class="row">
-					<img id="logoImg" src="/assets/image/bg/media1.jpg" alt="//placehold.it/180x100" class="img-responsive">
-				</div>
-			</div>
+			<h1>Playing with Bootstrap</h1>
+			<h3>
+				<span class="fa fa-pencil"></span> Affix &amp; Scrollspy plugins
+				help you create nice scrolling effects.
+			</h3>
+			<h3>
+				<span class="fa fa-pencil"></span> Minimal code is needed. Plugins
+				take care of the rest.
+			</h3>
+			<h3>
+				<span class="fa fa-pencil"></span> This demo will help you
+				understand how to use them in your projects.
+			</h3>
+			<a
+				href="http://www.sitepoint.com/understanding-bootstraps-affix-scrollspy-plugins"
+				class="btn btn-primary btn-lg">Learn More</a>
 		</div>
 	</div>
 	<!--end of .jumbotron-->
@@ -75,13 +201,10 @@
 			</div>
 
 			<div class="col-md-9">
-				<section id="NEWS">
+				<section id="web-design">
 					<h2>
 						<span class="fa fa-edit"></span> Web Design
 					</h2>
-					<a href="http://news.donga.com/List/Series_70010000000772/3/70010000000772/20111127/42184586/1">
-						±â»ç
-					</a>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -518,12 +641,35 @@
 				article.</a>
 		</p>
 	</footer>
-	
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/woosung.js"></script>
-  </body>
+	<script
+		src="//assets.codepen.io/assets/common/stopExecutionOnTimeout-f961f59a28ef4fd551736b43f94620b5.js"></script>
+
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script
+		src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<script>
+      $('#nav').affix({
+    offset: {
+        top: $('#nav').offset().top,
+        bottom: $('footer').outerHeight(true) + $('.application').outerHeight(true) + 40
+    }
+});
+      //@ sourceURL=pen.js
+    </script>
+
+
+	<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+
+
+
+</body>
 </html>
