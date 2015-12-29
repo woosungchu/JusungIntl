@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>ss : ${sessionScope.LOCALE_SESSION_ATTRIBUTE_NAME} - pg : ${pageContext.response.locale}</title>
 
     <!-- Bootstrap -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,9 @@
 			</div>
 			<div class="col-md-4">
 				<div class="row">
+					<a href="/?lang=en">영어</a><a href="/?lang=ko">한국어</a><a href="/?lang=zh">중국어</a>
 					<img id="logoImg" src="/assets/image/bg/media1.jpg" alt="//placehold.it/180x100" class="img-responsive">
+					<spring:message code="greeting"/>
 				</div>
 			</div>
 		</div>
@@ -80,7 +82,7 @@
 						<span class="fa fa-edit"></span> Web Design
 					</h2>
 					<a href="http://news.donga.com/List/Series_70010000000772/3/70010000000772/20111127/42184586/1">
-						���
+						기사
 					</a>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque

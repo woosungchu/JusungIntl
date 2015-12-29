@@ -1,11 +1,20 @@
 package com.bit.wsc.controller;
 
 import java.util.Locale;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+
+import com.bit.wsc.service.MainService;
 
 
 @Controller
@@ -13,12 +22,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 	
 	@Autowired
-	ApplicationContext applicationContext;
-	@Autowired
-	private MessageSource messageSource;
+	MainService mainService;
 	
 	@RequestMapping
-	public String index(){
+	public String index(@RequestParam(required=false) String lang, HttpSession session){
+		
+		if(lang !=null){
+			mainService.changeLocale(lang, session);
+		}
 		
 		return "/main/index";
 	}
@@ -43,16 +54,7 @@ public class MainController {
 	
 	@RequestMapping("/messageSourceTest")
 	public String messageSourceTest(){
-		
-//		MessageSource messageSource = (MessageSource) applicationContext.getBean("messageSource");
-		
-//		messageSource.getMessage("test",new Object[] { "woosung" },Locale.getDefault());
-		String result = messageSource.getMessage("test",new Object[] { "woosung" },Locale.getDefault());
-		System.out.println(result);
-//		System.out.println("1"+Locale.getDefault());
-//				
-//		RequestContextUtils.getLocaleResolver(request).setLocale(request, response, Locale.getDefault());;
-//		System.out.println("2"+request.getLocale());
+		mainService.messageSourceTest();
 		return "/main/messageSourceTest";
 	}
 }

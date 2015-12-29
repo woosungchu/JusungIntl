@@ -13,12 +13,13 @@
 	<!-- validator, conversionService, messageConverter를 자동 -->
 	<mvc:annotation-driven />
 	
-	<!-- the mvc resources tag does the magic 파일업로드 처리3 -->
-<!--  	<mvc:resources mapping="/product-images/**" location="file:\\192.168.1.9\temp\" /> -->
- 	
- 	
 	<context:annotation-config />
 	<context:component-scan base-package="com.bit.wsc.controller" />
+	
+ 	
+ 	
+	<!-- the mvc resources tag does the magic 파일업로드 처리3 -->
+<!--  	<mvc:resources mapping="/product-images/**" location="file:\\192.168.1.9\temp\" /> -->
 
 
 
@@ -63,8 +64,9 @@
             <property name="paramName" value="lang"></property>
         </bean>
 	</mvc:interceptors>
-	<bean id="localeResolver"
-    class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="en" />
+	</bean>
     
     <!-- MessageSource -->
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
