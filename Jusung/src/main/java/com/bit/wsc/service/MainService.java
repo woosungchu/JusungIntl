@@ -2,16 +2,18 @@ package com.bit.wsc.service;
 
 import java.util.Locale;
 
+
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.logging.Log;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-import org.springframework.web.servlet.support.RequestContextUtils;
 
 @Service
 public class MainService {
@@ -21,7 +23,11 @@ public class MainService {
 //	@Autowired
 //	private LocaleResolver localeResolver;
 	
+	Logger log = Logger.getLogger(this.getClass());
+	
 	public void changeLocale(String lang, HttpSession session){
+		log.info(lang+"으로 locale 바꾸는 작업시작");
+		
 		Locale lo = null;
 		
 		// step. Locale을 새로 설정한다.          
@@ -41,7 +47,7 @@ public class MainService {
 		
 		// step. 해당 컨트롤러에게 요청을 보낸 주소로 돌아간다.
 	    session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, lo);
-	    System.out.println(session.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME));
+//	    System.out.println(session.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME));
 		
 	}
 	
