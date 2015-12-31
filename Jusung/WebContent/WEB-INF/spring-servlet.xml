@@ -9,8 +9,17 @@
 	xmlns:mvc="http://www.springframework.org/schema/mvc">
 
 	<!-- 서블릿 컨테이너 디폴트 서블릿 위임 핸들러 -->
+	<!-- dispatcher servlet이 모든 요청을 처리하게 '/'로만 해놓으면 tomcat.conf.web.xml에 
+       정의되어 있는 url-pattern "/"을 무시해버린다. 고로 정적 content(png,jpg,css)등의 타입들을 
+       받지 못한다.-->
 	<mvc:default-servlet-handler />
-	<!-- validator, conversionService, messageConverter를 자동 -->
+	 <!--에러 ! - SimpleUrlHandlerMapping  // 디폴트 핸들러 매핑인 
+       DefaultAnnotationHandlerMapping이 처리해야 하는데 
+       	왜 SimpleUrlHandlerMapping이 처리를 하게 된 것일까?
+이유는 두 개 이상의 핸들러 매핑이 등록되었을 경우에는 디폴트 전략이 무시되기 때문에
+annotation-driven 을 걸어 DefaultAnnotationHandlerMapping을 해줘야 한다.
+ -->
+	<!-- validator, conversionService, messageConverter, DefaultAnnotationHandlerMapping를 자동 -->
 	<mvc:annotation-driven />
 	
 	<context:annotation-config />
@@ -64,6 +73,7 @@
             <property name="paramName" value="lang"></property>
         </bean>
 	</mvc:interceptors>
+	
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
 		<property name="defaultLocale" value="en" />
 	</bean>
