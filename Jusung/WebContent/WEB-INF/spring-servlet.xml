@@ -67,13 +67,19 @@ annotation-driven 을 걸어 DefaultAnnotationHandlerMapping을 해줘야 한다
 		<property name="defaultEncoding" value="utf-8" />
 	</bean>	
 	
-	<!-- locale resolver -->
 	<mvc:interceptors>  
+		<!-- logger -->
+		<mvc:interceptor>
+			 <mvc:mapping path="/**"/>
+            <bean id="loggerInterceptor" class="com.bit.wsc.util.LoggerInterceptor"></bean>
+		</mvc:interceptor>
+		<!-- locale Interceptor -->
         <bean  id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
             <property name="paramName" value="lang"></property>
         </bean>
 	</mvc:interceptors>
 	
+	<!-- locale resolver -->
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
 		<property name="defaultLocale" value="en" />
 	</bean>

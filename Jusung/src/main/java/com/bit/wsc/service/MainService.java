@@ -20,8 +20,6 @@ public class MainService {
 	
 	@Autowired
 	private MessageSource messageSource;
-//	@Autowired
-//	private LocaleResolver localeResolver;
 	
 	Logger log = Logger.getLogger(this.getClass());
 	

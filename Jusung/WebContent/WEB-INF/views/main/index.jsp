@@ -26,506 +26,165 @@
   
 <body data-spy="scroll" data-target=".scrollspy">
 
-	<div class="jumbotron">
-		<div class="container">
-			<div class="col-md-8">
-				<h1>Jusung International Corporation</h1>
-				<p class="lead">Steel Service & Sales Co.,Ltd.</p>
-			</div>
-			<div class="col-md-4">
-				<div class="row">
-					<a href="/?lang=en">영어</a><a href="/?lang=ko">한국어</a><a href="/?lang=zh">중국어</a>
-					<img id="logoImg" src="/assets/image/bg/media1.jpg" alt="//placehold.it/180x100" class="img-responsive">
-					<spring:message code="greeting"/>
-				</div>
-			</div>
-		</div>
+	<div class="navbar-wrapper">
+	  <div class="container">
+	    <div class="navbar navbar-inverse navbar-static-top">
+	      
+	        <div class="navbar-header">
+		    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </a>
+	        <a class="navbar-brand" href="#"><spring:message code="company.title"/></a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="#">Home</a></li>
+	            <li><a href="http://www.bootply.com" target="ext">About</a></li>
+	            <li><a href="#contact">Contact</a></li>
+	            <li class="dropdown">
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	              <ul class="dropdown-menu">
+	                <li><a href="/?lang=en"><spring:message code="language.english"/></a></li>
+	                <li><a href="/?lang=ko"><spring:message code="language.korean"/></a></li>
+	                <li><a href="/?lang=zh"><spring:message code="language.chinese"/></a></li>
+	              </ul>
+	            </li>
+	          </ul>
+	        </div>
+	
+	    </div>
+	  </div><!-- /container -->
+	</div><!-- /navbar wrapper -->
+	
+	
+	<!-- Carousel
+	================================================== -->
+	<div id="myCarousel" class="carousel slide">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="item active">
+	      <img src="/assets/image/bg/bg.jpg" style="width:100%" class="img-responsive">
+	      <div class="container">
+	        <div class="carousel-caption">
+	          <h1>Bootstrap 3 Carousel Layout</h1>
+	          <p></p>
+	          <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
+	        </p>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="/assets/image/bg/bg.jpg" style="width:100%" class="img-responsive">
+	      <div class="container">
+	        <div class="carousel-caption">
+	          <h1>Changes to the Grid</h1>
+	          <p>Bootstrap 3 still features a 12-column grid, but many of the CSS class names have completely changed.</p>
+	          <p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="/assets/image/bg/bg.jpg" style="width:100%" class="img-responsive">
+	      <div class="container">
+	        <div class="carousel-caption">
+	          <h1>Percentage-based sizing</h1>
+	          <p>With "mobile-first" there is now only one percentage-based grid.</p>
+	          <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a></p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	    <span class="icon-prev"></span>
+	  </a>
+	  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+	    <span class="icon-next"></span>
+	  </a>  
 	</div>
-	<!--end of .jumbotron-->
-
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-3 scrollspy">
-				<ul id="nav" class="nav hidden-xs hidden-sm affix-top"
-					data-spy="affix">
-					<li class=""><a href="#web-design">Web Design</a></li>
-					<li><a href="#web-development">Web Development</a>
-						<ul class="nav">
-							<li><a href="#ruby"><span
-									class="fa fa-angle-double-right"></span>Ruby</a></li>
-							<li><a href="#python"><span
-									class="fa fa-angle-double-right"></span>Python</a></li>
-							<li><a href="#php"><span
-									class="fa fa-angle-double-right"></span>PHP</a></li>
-						</ul></li>
-					<li><a href="#marketing">Marketing</a></li>
-					<li><a href="#graphic-design">Graphic Design</a></li>
-					<li><a href="#logistics">Logistics</a></li>
-					<li><a href="#social">Social</a></li>
-					<li><a href="#management">Management</a></li>
-					<li><a href="#chemistry">Chemistry</a></li>
-					<li><a href="#mobile-development">Mobile Development</a>
-						<ul class="nav">
-							<li><a href="#android"><span
-									class="fa fa-angle-double-right"></span>Android</a></li>
-							<li><a href="#iOS"><span
-									class="fa fa-angle-double-right"></span>iOS</a></li>
-						</ul></li>
-					<li><a href="#mathematics">Mathematics</a></li>
-				</ul>
-			</div>
-
-			<div class="col-md-9">
-				<section id="NEWS">
-					<h2>
-						<span class="fa fa-edit"></span> Web Design
-					</h2>
-					<a href="http://news.donga.com/List/Series_70010000000772/3/70010000000772/20111127/42184586/1">
-						기사
-					</a>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-						ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
-						tempus, tellus eget condimentum rhoncus, sem quam semper libero,
-						sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-						vel, luctus pulvinar, hendrerit id, lorem.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-						lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nam quam nunc, blandit vel,
-						luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-						tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-					</p>
-					<button type="button" class="btn btn-primary">Learn More</button>
-				</section>
-				<!--end of #web-design-->
-
-				<section id="web-development">
-					<h2>
-						<span class="fa fa-edit"></span> Web Development
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Donec sodales sagittis magna. Sed consequat, leo eget
-						bibendum sodales, augue velit cursus nunc. Etiam ultricies nisi
-						vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-						Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
-						sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-						Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
-					</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh.Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-
-					<section id="ruby">
-						<h3>Ruby</h3>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<button type="button" class="btn btn-primary">Learn More</button>
-					</section>
-					<!--end of #ruby-->
-
-					<section id="python">
-						<h3>Python</h3>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<button type="button" class="btn btn-primary">Learn More</button>
-					</section>
-					<!--end of #python-->
-
-					<section id="php">
-						<h3>PHP</h3>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<button type="button" class="btn btn-primary">Learn More</button>
-					</section>
-					<!--end of #php-->
-				</section>
-				<!--end of #web-devlopment-->
-
-				<section id="marketing">
-					<h2>
-						<span class="fa fa-edit"></span> Marketing
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-						lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nam quam nunc, blandit vel,
-						luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-						tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-					</p>
-					<p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend
-						ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-						tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque
-						rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
-						Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-						Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-						libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
-						blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
-					<button type="button" class="btn btn-primary">Learn More</button>
-				</section>
-				<!--end of #marketing-->
-
-				<section id="graphic-design">
-					<h2>
-						<span class="fa fa-edit"></span> Graphic Design
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Donec sodales sagittis magna. Sed consequat, leo eget
-						bibendum sodales, augue velit cursus nunc. Etiam ultricies nisi
-						vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-						Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
-						sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-						Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
-					</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<button type="button" class="btn btn-primary">Learn More</button>
-				</section>
-				<!--end of #graphic-design-->
-
-				<section id="logistics">
-					<h2>
-						<span class="fa fa-edit"></span> Logistics
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Donec sodales sagittis magna. Sed consequat, leo eget
-						bibendum sodales, augue velit cursus nunc. Etiam ultricies nisi
-						vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-						Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
-						sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-						Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
-					</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<button type="button" class="btn btn-primary">Learn More</button>
-				</section>
-				<!--end of #logistics-->
-
-				<section id="social">
-					<h2>
-						<span class="fa fa-edit"></span> Social
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-						lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nam quam nunc, blandit vel,
-						luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-						tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-					</p>
-					<p>Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-						ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
-						tempus, tellus eget condimentum rhoncus, sem quam semper libero,
-						sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-						vel, luctus pulvinar, hendrerit id, lorem.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<button type="button" class="btn btn-primary">Learn More</button>
-				</section>
-				<!--end of #social-->
-
-				<section id="management">
-					<h2>
-						<span class="fa fa-edit"></span> Management
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend
-						ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-						tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque
-						rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
-						Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-						Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-						libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
-						blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
-					<p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-						lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nam quam nunc, blandit vel,
-						luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-						tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-					</p>
-					<button type="button" class="btn btn-primary">Learn More</button>
-				</section>
-				<!--end of #management-->
-
-				<section id="chemistry">
-					<h2>
-						<span class="fa fa-edit"></span> Chemistry
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Donec sodales sagittis magna. Sed consequat, leo eget
-						bibendum sodales, augue velit cursus nunc. Etiam ultricies nisi
-						vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-						Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
-						sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-						Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
-					</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<button type="button" class="btn btn-primary">Learn More</button>
-				</section>
-				<!--end of #chemistry-->
-
-				<section id="mobile-development">
-					<h2>
-						<span class="fa fa-edit"></span> Mobile Development
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Donec sodales sagittis magna. Sed consequat, leo eget
-						bibendum sodales, augue velit cursus nunc. Etiam ultricies nisi
-						vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-						Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
-						sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-						Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
-					</p>
-					<p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-						lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nam quam nunc, blandit vel,
-						luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-						tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-					</p>
-
-					<section id="android">
-						<h3>Android Development</h3>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<button type="button" class="btn btn-primary">Learn More</button>
-					</section>
-					<!--end of #android-->
-
-					<section id="iOS">
-						<h3>iOS Development</h3>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-							sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-							amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-							mauris sit amet nibh. Nam quam nunc, blandit vel, luctus
-							pulvinar, hendrerit id, lorem.</p>
-						<button type="button" class="btn btn-primary">Learn More</button>
-					</section>
-					<!--end of #iOS-->
-				</section>
-				<!--end of #mobile-development-->
-
-				<section id="mathematics">
-					<h2>
-						<span class="fa fa-edit"></span> Mathematics
-					</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Donec sodales sagittis magna. Sed consequat, leo eget
-						bibendum sodales, augue velit cursus nunc. Etiam ultricies nisi
-						vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-						Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
-						sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-						Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
-					</p>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-						sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-						vel, aliquet nec, vulputate eget, arcu.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<button type="button" class="btn btn-primary">Learn More</button>
-				</section>
-				<!--end of #mathematics-->
-			</div>
-
-		</div>
-		<!--end of .row-->
-	</div>
-	<!--end of .container-->
-
-	<section class="application">
-		<div class="container">
-			<h2>Come and Join Us</h2>
-			<div class="row">
-				<div class="col-sm-6">
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante.</p>
-					<img class="img-responsive  "
-						src="http://placehold.it/500x250/5fb3ce/000000">
-				</div>
-				<div class="col-sm-6">
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae
-						sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-						amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-						mauris sit amet nibh. Nam quam nunc, blandit vel, luctus pulvinar,
-						hendrerit id, lorem.</p>
-					<button type="button" class="btn btn-primary">Apply Now</button>
-				</div>
-			</div>
-			<!--end of .row-->
-		</div>
-		<!--end of .container-->
-	</section>
-
-	<footer>
-		<p class="text-center">
-			A demo by George Martsoukos. <a
-				href="http://www.sitepoint.com/understanding-bootstraps-affix-scrollspy-plugins">See
-				article.</a>
-		</p>
-	</footer>
+	<!-- /.carousel -->
+	
+	
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+	
+	<div class="container marketing">
+	
+	  <!-- Three columns of text below the carousel -->
+	  <div class="row">
+	    <div class="col-md-4 text-center">
+	      <img class="img-circle" src="http://placehold.it/140x140">
+	      <h2>Mobile-first</h2>
+	      <p>Tablets, phones, laptops. The new 3 promises to be mobile friendly from the start.</p>
+	      <p><a class="btn btn-default" href="#">View details »</a></p>
+	    </div>
+	    <div class="col-md-4 text-center">
+	      <img class="img-circle" src="http://placehold.it/140x140">
+	      <h2>One Fluid Grid</h2>
+	      <p>There is now just one percentage-based grid for Bootstrap 3. Customize for fixed widths.</p>
+	      <p><a class="btn btn-default" href="#">View details »</a></p>
+	    </div>
+	    <div class="col-md-4 text-center">
+	      <img class="img-circle" src="http://placehold.it/140x140">
+	      <h2>LESS is More</h2>
+	      <p>Improved support for mixins make the new Bootstrap 3 easier to customize.</p>
+	      <p><a class="btn btn-default" href="#">View details »</a></p>
+	    </div>
+	  </div><!-- /.row -->
+	
+	
+	  <!-- START THE FEATURETTES -->
+	
+	  <hr class="featurette-divider">
+	
+	  <div class="featurette">
+	    <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
+	    <h2 class="featurette-heading">Responsive Design. <span class="text-muted">It'll blow your mind.</span></h2>
+	    <p class="lead">In simple terms, a responsive web design figures out what resolution of device it's being served on. Flexible grids then size correctly to fit the screen.</p>
+	  </div>
+	
+	  <hr class="featurette-divider">
+	
+	  <div class="featurette">
+	    <img class="featurette-image img-circle pull-left" src="http://placehold.it/512">
+	    <h2 class="featurette-heading">Smaller Footprint. <span class="text-muted">Lightweight.</span></h2>
+	    <p class="lead">The new Bootstrap 3 promises to be a smaller build. The separate Bootstrap base and responsive.css files have now been merged into one. There is no more fixed grid, only fluid.</p>
+	  </div>
+	
+	  <hr class="featurette-divider">
+	
+	  <div class="featurette">
+	    <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
+	    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Flatness.</span></h2>
+	    <p class="lead">A big design trend for 2013 is "flat" design. Gone are the days of excessive gradients and shadows. Designers are producing cleaner flat designs, and Bootstrap 3 takes advantage of this minimalist trend.</p>
+	  </div>
+	
+	  <hr class="featurette-divider">
+	
+	  <!-- /END THE FEATURETTES -->
+	
+	
+	  <!-- FOOTER -->
+	  <footer>
+	    <p class="pull-right"><a href="#">Back to top</a></p>
+	    <p>This Bootstrap layout is compliments of Bootply. · <a href="http://www.bootply.com/62603">Edit on Bootply.com</a></p>
+	  </footer>
+	
+	</div><!-- /.container -->
 	
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/woosung.js"></script>
+<!--     <script src="/assets/js/woosung.js"></script> -->
   </body>
 </html>
