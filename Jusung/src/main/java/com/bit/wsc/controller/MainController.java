@@ -34,27 +34,14 @@ public class MainController {
 		return "/main/index";
 	}
 	
-	@RequestMapping("/css")
-	public String css(){
+	@RequestMapping("/2")
+	public String index2(@RequestParam(required=false) String lang, HttpSession session){
 		
-		return "/main/css";
-	}
-
-	@RequestMapping("/javascript")
-	public String javascript(){
+		if(lang !=null){
+			mainService.changeLocale(lang, session);
+		}
 		
-		return "/main/javaScript";
+		return "/main/index2";
 	}
 	
-	@RequestMapping("/rateCheck")
-	public String rateCheck(){
-		
-		return "/main/rateCheck";
-	}
-	
-	@RequestMapping("/messageSourceTest")
-	public String messageSourceTest(){
-		mainService.messageSourceTest();
-		return "/main/messageSourceTest";
-	}
 }

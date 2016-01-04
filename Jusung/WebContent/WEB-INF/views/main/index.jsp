@@ -41,10 +41,10 @@
 	        <div class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
 	            <li class="active"><a href="#">Home</a></li>
-	            <li><a href="http://www.bootply.com" target="ext">About</a></li>
+	            <li><a href="#work">Work</a></li>
 	            <li><a href="#contact">Contact</a></li>
 	            <li class="dropdown">
-	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
 	              <ul class="dropdown-menu">
 	                <li><a href="/?lang=en"><spring:message code="language.english"/></a></li>
 	                <li><a href="/?lang=ko"><spring:message code="language.korean"/></a></li>
@@ -146,7 +146,7 @@
 	  <hr class="featurette-divider">
 	
 	  <div class="featurette">
-	    <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
+	    <img class="featurette-image img-circle pull-right" src="/assets/image/source/cutting.jpg">
 	    <h2 class="featurette-heading">Responsive Design. <span class="text-muted">It'll blow your mind.</span></h2>
 	    <p class="lead">In simple terms, a responsive web design figures out what resolution of device it's being served on. Flexible grids then size correctly to fit the screen.</p>
 	  </div>
@@ -154,7 +154,7 @@
 	  <hr class="featurette-divider">
 	
 	  <div class="featurette">
-	    <img class="featurette-image img-circle pull-left" src="http://placehold.it/512">
+	    <img class="featurette-image img-circle pull-left" src="/assets/image/source/dongAIlBo.jpg">
 	    <h2 class="featurette-heading">Smaller Footprint. <span class="text-muted">Lightweight.</span></h2>
 	    <p class="lead">The new Bootstrap 3 promises to be a smaller build. The separate Bootstrap base and responsive.css files have now been merged into one. There is no more fixed grid, only fluid.</p>
 	  </div>
@@ -162,7 +162,7 @@
 	  <hr class="featurette-divider">
 	
 	  <div class="featurette">
-	    <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
+	    <img class="featurette-image img-circle pull-right" src="/assets/image/source/profile.jpg">
 	    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Flatness.</span></h2>
 	    <p class="lead">A big design trend for 2013 is "flat" design. Gone are the days of excessive gradients and shadows. Designers are producing cleaner flat designs, and Bootstrap 3 takes advantage of this minimalist trend.</p>
 	  </div>
@@ -174,8 +174,8 @@
 	
 	  <!-- FOOTER -->
 	  <footer>
+	  	<p><a href="#">Contact</a></p>
 	    <p class="pull-right"><a href="#">Back to top</a></p>
-	    <p>This Bootstrap layout is compliments of Bootply. · <a href="http://www.bootply.com/62603">Edit on Bootply.com</a></p>
 	  </footer>
 	
 	</div><!-- /.container -->
