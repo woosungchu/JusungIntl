@@ -122,19 +122,19 @@
 	  <div class="row">
 	    <div class="col-md-4 text-center">
 	      <img class="img-circle" src="http://placehold.it/140x140">
-	      <h2>Mobile-first</h2>
-	      <p>Tablets, phones, laptops. The new 3 promises to be mobile friendly from the start.</p>
+	      <h2>Full-Experience</h2>
+	      <p>철강 업종 30년 경력의 전문가</p>
 	      <p><a class="btn btn-default" href="#">View details »</a></p>
 	    </div>
 	    <div class="col-md-4 text-center">
 	      <img class="img-circle" src="http://placehold.it/140x140">
-	      <h2>One Fluid Grid</h2>
-	      <p>There is now just one percentage-based grid for Bootstrap 3. Customize for fixed widths.</p>
+	      <h2>Global Trade</h2>
+	      <p>인도, 러시아, 중국, 미국 지역불문 전문가</p>
 	      <p><a class="btn btn-default" href="#">View details »</a></p>
 	    </div>
 	    <div class="col-md-4 text-center">
 	      <img class="img-circle" src="http://placehold.it/140x140">
-	      <h2>LESS is More</h2>
+	      <h2>The Strong Trust overall contract </h2>
 	      <p>Improved support for mixins make the new Bootstrap 3 easier to customize.</p>
 	      <p><a class="btn btn-default" href="#">View details »</a></p>
 	    </div>
@@ -185,6 +185,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/assets/js/bootstrap.min.js"></script>
-<!--     <script src="/assets/js/woosung.js"></script> -->
+    <script src="/assets/js/woosung.js"></script>
   </body>
 </html>

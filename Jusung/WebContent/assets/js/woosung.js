@@ -1,6 +1,3 @@
-     $('#nav').affix({
-	    offset: {
-	        top: $('#nav').offset().top,
-	        bottom: $('footer').outerHeight(true) + $('.application').outerHeight(true) + 40
-	    }
-	});
+$('.carousel').carousel({
+  interval: 4000
+})
