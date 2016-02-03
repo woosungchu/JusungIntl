@@ -1,6 +1,12 @@
 package com.bit.wsc.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
+
+
+
+
 
 
 
@@ -15,11 +21,16 @@ import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
+import com.bit.wsc.dao.EmployeeDAO;
+import com.bit.wsc.vo.EmployeeVo;
+
 @Service
 public class MainService {
 	
 	@Autowired
 	private MessageSource messageSource;
+	@Autowired
+	private EmployeeDAO employeeDAO;
 	
 	Logger log = Logger.getLogger(this.getClass());
 	
@@ -83,6 +94,77 @@ public class MainService {
 //		RequestContextUtils.getLocaleResolver(request).setLocale(request, response, Locale.getDefault());;
 //		System.out.println("2"+request.getLocale());
 		
+	}
+
+	public ArrayList<EmployeeVo> chart() {
+		
+		test();
+		
+		ArrayList<EmployeeVo> employeeList = 
+				(ArrayList<EmployeeVo>) employeeDAO.getList();
+		
+		return employeeList;
+	}
+	
+	public List<EmployeeVo> test2(){
+		List<EmployeeVo> emplist = new ArrayList<EmployeeVo>();
+		String[] name = {"가군","나군","다군","라군"};
+		
+		EmployeeVo vo ;
+		for (int i = 0; i < name.length; i++) {
+			vo = new EmployeeVo();
+			vo.setName(name[i]);
+			vo.setMoney(getSum(name[i]));
+			
+			emplist.add(vo);
+		}
+		System.out.println(emplist);
+		
+		return emplist;
+	}
+	
+	public int getSum(String name){
+		test(); // 값 계속 랜덤으로 생성
+		
+		
+		EmployeeVo vo = new EmployeeVo();
+		vo.setName(name);
+		
+		ArrayList<EmployeeVo> employeeList = 
+				(ArrayList<EmployeeVo>) employeeDAO.selectByName(vo);
+		int result = 0;
+		
+		for (int i = 0; i < employeeList.size(); i++) {
+			result += employeeList.get(i).getMoney();
+		}
+		return result;
+	}
+	
+	public void test(){
+		EmployeeVo vo1 = new EmployeeVo();
+		vo1.setName("가군");
+		EmployeeVo vo2 = new EmployeeVo();
+		vo2.setName("나군");
+		EmployeeVo vo3 = new EmployeeVo();
+		vo3.setName("다군");
+		EmployeeVo vo4 = new EmployeeVo();
+		vo4.setName("라군");
+		
+		int money = 0; 
+		for (int i = 0; i < 50; i++) {
+			money = (int)(Math.random()*10000);
+			vo1.setMoney(money);
+			employeeDAO.insert(vo1);
+			money = (int)(Math.random()*10000);
+			vo2.setMoney(money);
+			employeeDAO.insert(vo2);
+			money = (int)(Math.random()*10000);
+			vo3.setMoney(money);
+			employeeDAO.insert(vo3);
+			money = (int)(Math.random()*10000);
+			vo4.setMoney(money);
+			employeeDAO.insert(vo4);
+		}
 	}
 
 }

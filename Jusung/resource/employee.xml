@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="employee">
+	<typeAlias alias="EmployeeVo" type="com.bit.wsc.vo.EmployeeVo"/>
+	
+	<select id="selectAll" resultClass="EmployeeVo">
+		 <![CDATA[
+	    select * from EMPLOYEE
+	  ]]>
+	</select>
+	
+	<select id="selectByName" parameterClass="EmployeeVo" resultClass="com.bit.wsc.vo.EmployeeVo">
+		 <![CDATA[
+	    select * from EMPLOYEE where name = #name#
+	  ]]>
+	</select>
+	
+	<insert id="insert" parameterClass="EmployeeVo">
+		insert into EMPLOYEE VALUES (#name#, #money#)
+	</insert>
+
+</sqlMap>

@@ -8,5 +8,6 @@
 
  	<!-- sql mapping files -->
  	<sqlMap resource="member.xml"/>
+ 	<sqlMap resource="employee.xml"/>
  	
 </sqlMapConfig>
