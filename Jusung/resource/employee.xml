@@ -10,7 +10,7 @@
 	  ]]>
 	</select>
 	
-	<select id="selectByName" parameterClass="EmployeeVo" resultClass="com.bit.wsc.vo.EmployeeVo">
+	<select id="selectByName" parameterClass="EmployeeVo" resultClass="EmployeeVo">
 		 <![CDATA[
 	    select * from EMPLOYEE where name = #name#
 	  ]]>

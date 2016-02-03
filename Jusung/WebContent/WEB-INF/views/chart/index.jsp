@@ -122,6 +122,7 @@ var   d1;                                  // First data series
 		  // Draw Graph
 		  graph = Flotr.draw(conatiner, [ d1 ], {
 		    xaxis: {
+			  ticks : [[1,"가군"],[2,"나군"],[3,"다군"],[4,"라군"]],
 		      minorTickFreq: 4
 		    }, 
 		    grid: {
