@@ -118,7 +118,6 @@ public class MainService {
 			
 			emplist.add(vo);
 		}
-		System.out.println(emplist);
 		
 		return emplist;
 	}
